@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('index') }}
+{% endblock %}
+
+{% block body %}
+    INDEX
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('index') }}
+{% endblock %}

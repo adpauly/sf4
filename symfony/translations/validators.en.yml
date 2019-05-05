@@ -1,0 +1,3 @@
+work:
+    authors:
+        min_required: You must specify at least one author

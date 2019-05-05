@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('works_edit') }}
+{% endblock %}
+
+{% block body %}
+    <h1>Add or edit work</h1>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+
+            {{ form_start(editWorkForm, {'attr': {'novalidate': 'novalidate'}}) }}
+
+            <div class="form-group row">
+                {{ form_label(editWorkForm.name, null, {'label_attr': {'class': 'col-xs-2 col-form-label'}}) }}
+                <div class="col-xs-10">
+                    {{ form_widget(editWorkForm.name) }}
+                    {{ form_errors(editWorkForm.name) }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                {{ form_label(editWorkForm.description, null, {'label_attr': {'class': 'col-xs-2 col-form-label'}}) }}
+                <div class="col-xs-10">
+                    {{ form_widget(editWorkForm.description) }}
+                    {{ form_errors(editWorkForm.description) }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                {{ form_label(editWorkForm.authors, null, {'label_attr': {'class': 'col-xs-2 col-form-label'}}) }}
+                <div class="col-xs-10">
+                    {{ form_widget(editWorkForm.authors) }}
+                    {{ form_errors(editWorkForm.authors) }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                {{ form_label(editWorkForm.realizationDate, null, {'label_attr': {'class': 'col-xs-2 col-form-label'}}) }}
+                <div class="col-xs-10">
+                    {{ form_widget(editWorkForm.realizationDate) }}
+                    {{ form_errors(editWorkForm.realizationDate) }}
+                </div>
+            </div>
+
+            {{ form_widget(editWorkForm.submit) }}
+
+            {{ form_end(editWorkForm, {'render_rest': false}) }}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('works_edit') }}
+{% endblock %}

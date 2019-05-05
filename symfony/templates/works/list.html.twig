@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('works_list') }}
+{% endblock %}
+
+{% block body %}
+    List of works
+
+    {% for work in works %}
+        {{ work.id }} {{ work.name }}
+    {% else %}
+        No work found.
+    {% endfor %}
+
+    <a class="btn btn-primary" href="{{ path('app_work_edit') }}">Add a new work</a>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('works_list') }}
+{% endblock %}
