@@ -2,7 +2,7 @@
 name: Feature request
 about: Technical specifications
 title: "[Section][Section2] Nom de la feature"
-labels: ''
+labels: inSpecification
 assignees: ''
 
 ---
