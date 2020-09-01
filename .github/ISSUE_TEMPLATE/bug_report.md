@@ -2,7 +2,7 @@
 name: Bug report
 about: Bug report
 title: "[Section] Titre"
-labels: 'Type:bug', 'State:ToPlan'
+labels: 'Type:bug State:ToPlan'
 assignees: 'adpauly'
 
 ---
